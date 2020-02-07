@@ -27,7 +27,7 @@ final class MaxFolderSizeRuleTest extends MediaTestCase
     /** @test */
     public function it_validates_max_folder_size_is_valid()
     {
-        $this->app['config']->set('asgard.media.config.max-total-size', 10000); // Mocked folder size: 480; Mocked image: ~8192
+        $this->app['config']->set('asgard.media.config.max-total-size', 100000); // Mocked folder size: 480; Mocked image: ~8192
 
         $validator = $this->buildValidator(UploadedFile::fake()->image('avatar.jpg'));
         $this->assertTrue($validator->passes());
